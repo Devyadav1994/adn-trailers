@@ -1,10 +1,14 @@
-class Movie:
+class Video():
+    VALID_RATINGS = ['G', 'PG', 'PG-13', 'R']
+
     def __init__(self):
         self._trailer_youtube_url = ''
         self._title = ''
+        self._duration
         self._release_date = ''
         self._poster_image_url = ''
         self._actors = []
+        self._rating = ''
 
     @property
     def trailer_youtube_url(self):
@@ -40,3 +44,20 @@ class Movie:
     @actors.setter
     def actors(self, value):
         self._actors = value
+
+    @property
+    def rating(self):
+        return self._rating
+    @rating.setter
+    def rating(self, value):
+        self._rating = value
+
+class TvShow(Video):
+    def __init__(self):
+        Parent.__init__()
+
+class Movie(Video):
+    """ This class provides a way to store movie related information"""
+
+    def __init__(self):
+        Parent.__init__()
