@@ -4,7 +4,6 @@ class Video():
     def __init__(self):
         self._trailer_youtube_url = ''
         self._title = ''
-        self._duration
         self._release_date = ''
         self._poster_image_url = ''
         self._actors = []
@@ -53,11 +52,13 @@ class Video():
         self._rating = value
 
 class TvShow(Video):
+    """ This class provides a way to store TV show related information"""
+
     def __init__(self):
-        Parent.__init__()
+        Video.__init__(self)
 
 class Movie(Video):
     """ This class provides a way to store movie related information"""
 
     def __init__(self):
-        Parent.__init__()
+        Video.__init__(self)
